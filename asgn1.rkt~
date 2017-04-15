@@ -53,4 +53,11 @@
 (define parseThis (read to_translate_port))
 (define translated_prog (parse parseThis))
 (define string_prog (~a translated_prog))
+(printf "Target Program: ")
+(print parseThis)
+(printf "\n" )
+(printf "JS version: ")
+(print string_prog)
+(printf "\n" )
+;; Send translated_prog to output file
 (fprintf file_out_port string_prog)
